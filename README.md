@@ -1,24 +1,41 @@
-# README
+# Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+a simple **blog** application developed using **Ruby on Rails**
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+This is a simple **blog** application developed using **Ruby on Rails**. This app is used to manage and facilitate a functional blog. The application implements the basic principles of **MVC** (Model, View, Controller) and **RESTful** design.
 
-* System dependencies
+## Ruby version
 
-* Configuration
+This application is suitable for **ruby 2.3**
 
-* Database creation
+## System dependencies
 
-* Database initialization
+The following are the require dependencies of the application
 
-* How to run the test suite
+* **Ruby** - *ruby 2.3.1p112*
+* **SQlite3** - *sqlite3 3.8.7.2*
+* **Rails** - *rails 5.1.4*
 
-* Services (job queues, cache servers, search engines, etc.)
+## Gem Dependencies
 
-* Deployment instructions
+install the gem dependencies that are already mentioned in Gemfile on the `blog` directory using:
 
-* ...
+`ruby bin/bundle install`
+
+## Database initialization
+
+At this point, you can use a bin/rails command to run the migration:
+
+`ruby bin/rails db:migrate`
+
+## Starting the Server
+
+You actually have a functional Rails application already. To see it, you need to start a web server on your development machine. You can do this by running the following in the blog directory:
+
+`ruby bin/rails server`
+
+## License
+
+This application is under the MIT License.
