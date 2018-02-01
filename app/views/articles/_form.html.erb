@@ -2,30 +2,31 @@
 
   <% if @article.errors.any? %>
     <div id="error_explanation">
-      <h2>
+      <div class="alert alert-danger" role="alert">
+        <strong>Oh snap!</strong>
         <%= pluralize(@article.errors.count, "error") %> prohibited
         this article from being saved:
-      </h2>
-      <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+      </div>
+      <blockquote>
+        <ul>
+          <% @article.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </blockquote>
     </div>
   <% end %>
 
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
+  <div class="form-group">
+    <%= form.label :text %>
+    <%= form.text_area :text, class: "form-control" %>
+  </div>
 
-  <p>
-    <%= form.submit %>
-  </p>
+  <%= form.submit :Submit, class: "btn btn-success" %>
 
 <% end %>

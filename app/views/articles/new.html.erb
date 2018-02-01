@@ -1,5 +1,20 @@
-<h1>New article</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', articles_path %>
+<div class="container">
+  <div class="row">
+  	<div class="col-md-8">
+  		<h2>New article</h2>
+  		<%= render 'form' %>
+		<hr/>
+		<%= link_to 'Back', articles_path %>
+  	</div>
+  	<div class="col-md-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Article Options</h3>
+			</div>
+			<div class="panel-body">
+			Panel content
+			</div>
+		</div>
+  	</div>
+  </div>
+</div>
