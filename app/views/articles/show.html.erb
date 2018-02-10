@@ -2,6 +2,7 @@
   <div class="row">
   	<div class="col-md-8">
   		<h1><%= @article.title %></h1>
+  		<strong><span class="glyphicon glyphicon-time"></span> <%= distance_of_time_in_words(@article.created_at.to_datetime, DateTime.current) %> ago</strong>
   		<p><%= @article.text %></p>
 		<h3>Comments</h3>
 			<div class="list-group">

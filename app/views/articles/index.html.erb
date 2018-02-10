@@ -10,7 +10,7 @@
   <% @articles.each do |article| %>
     <div class="col-md-4">
         <h3><%= link_to article.title, article_path(article) %></h3>
-        <strong><%= article.created_at.to_date.to_formatted_s(:long) %></strong>
+        <strong><span class="glyphicon glyphicon-time"></span> <%= distance_of_time_in_words(article.created_at.to_datetime, DateTime.current) %> ago</strong>
         <p><%= article.text %></p>
     </div>
   <% end %>

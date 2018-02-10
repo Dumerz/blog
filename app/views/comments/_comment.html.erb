@@ -1,4 +1,4 @@
 <a class="list-group-item">
-	<h5 class="list-group-item-heading"><strong><%= comment.commenter %></strong> |  <%= comment.created_at.to_date.to_formatted_s(:long) %></h5>
+	<h5 class="list-group-item-heading"><strong><%= comment.commenter %></strong> | <span class="glyphicon glyphicon-time"></span> <%= distance_of_time_in_words(comment.created_at.to_datetime, DateTime.current) %> ago</h5>
 	<p class="list-group-item-text"><%= comment.body %></p>
 </a>

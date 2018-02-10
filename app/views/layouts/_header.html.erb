@@ -11,8 +11,8 @@
 					</div>
 					<div id="navbar" class="navbar-collapse collapse navbar-nav navbar-right">
 						<ul class="nav navbar-nav">
-							<li><%= link_to 'Home', root_path %></li>
-							<li><%= link_to 'Articles', articles_path %></li>
+							<li <%= current_path?(root_path) %>><%= link_to 'Home', root_path %></li>
+							<li <%= current_path?(articles_path) %>><%= link_to 'Articles', articles_path %></li>
 						</ul>
 					</div>
 				</div>
